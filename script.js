@@ -15,7 +15,7 @@ let food = {
 }
 
 function criarBG() {
-  context.fillStyle = "yellow";
+  context.fillStyle = "yellowgreen";
   context.fillRect(0, 0, 16 * box, 16 * box);
 }
 
@@ -25,6 +25,7 @@ function criarCobrinha(){
     context.fillRect(snake[i].x, snake[i].y, box, box)
   }
 }
+
 
 function drawFood(){
   context.fillStyle = "red";
@@ -48,7 +49,7 @@ function startGame () {
 
   for(i=1; i< snake.length; i++) {
     if(snake[0].x == snake[i] && snake[0].y == snake[i]){
-      clearInterval(jogo)
+      clearInterval(game)
       alert("GAME OVER :( ")
     }
   }
@@ -69,20 +70,19 @@ function startGame () {
     snake.pop();
   }else{
     food.x = Math.floor(Math.random() * 15 +1) * box,
-    food.y = Math.floor(Math.random() * 15 + 1) * box
+    food.y = Math.floor(Math.random() * 15 +1) * box
   }
 
   let newHead = {
     x: snakeX,
     y: snakeY
 }
+
 snake.unshift(newHead);
 
 }
 
 let game = setInterval(startGame, 200);
-
-
 
 
 // file:///home/monnylly/Projects_persona/projetos-dio/Jogo-da-cobrinha/index.html
