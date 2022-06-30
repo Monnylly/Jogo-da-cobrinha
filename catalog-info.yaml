@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: snake-game
+  annotations:
+    github.com/project-slug: Monnylly/snake-game
+spec:
+  type: other
+  lifecycle: unknown
+  owner: teste
